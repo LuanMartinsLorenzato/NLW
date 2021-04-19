@@ -2,5 +2,5 @@
 - React Native
 - Expo
 - Yarn
-- Instlaçao do Expo pelo NPM do Node.js
+- Instalação do Expo pelo NPM do Node.js
 - Vscode.
