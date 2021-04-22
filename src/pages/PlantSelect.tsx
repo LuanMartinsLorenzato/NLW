@@ -21,7 +21,13 @@ export function PlantSelect() {
     useEffect(() => {
         async function fetchEnviroment() {
             const { data } = await api.get('plants_environments');
-            setEnviroments(data);
+            setEnviroments([
+                {
+                    key: 'all',
+                    title: 'Todos',
+                },
+                ...data
+            ]);
         }
         fetchEnviroment();
     }, [])
@@ -41,8 +47,8 @@ export function PlantSelect() {
                     data={enviroments}
                     renderItem={({ item }) => (
                         <EnviromentButton
-                            title="Cozinha"
-                            active
+                            title={item.title}
+
                         />
                     )}
                     horizontal
@@ -81,7 +87,7 @@ const styles = StyleSheet.create({
         height: 40,
         justifyContent: "center",
         paddingBottom: 5,
-        marginLeft: 32,
+        marginLeft: 20,
         marginVertical: 32
     }
 })
