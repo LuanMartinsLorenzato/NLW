@@ -114,7 +114,7 @@ export function PlantSelect() {
                 <Header />
 
                 <Text style={styles.title} >Em qual ambiente</Text>
-                <Text style={styles.subtitle} >você que sua planta</Text>
+                <Text style={styles.subtitle} >você quer colocar sua planta ?</Text>
             </View>
             <View>
                 <FlatList
